@@ -1,4 +1,63 @@
-/*CSS for submit button*/
+
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans','Arial', 'sans-serif';
+}
+
+img{
+    width: 100%;
+    height: 298px;
+}
+
+body{
+    background-color:rgb(236, 236, 218); 
+}
+
+.hero-image{
+    background-image: url(./image/Screenshot\ 2024-06-18\ at\ 3.46.49\ AM.png);
+    height: 52px;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+
+.hero-text{
+    color: rgb(236, 236, 218); 
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    left: 45px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.two-column{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+  }
+  
+  .info{
+    font-size: 1.15em;
+  }
+
+
+
+
+
+
+
+
+  /*CSS for submit button
+ 
+  .submit-button:hover { 
+    background-color: #45a049; Darker green 
+  } 
+
 .submit-button {
     background-color: 
     color: white; 
@@ -8,8 +67,9 @@
     cursor: pointer; 
     font-size: 16px; 
   }
-  
-  .submit-button:hover {
-    background-color: #45a049; /* Darker green */
-  }
+    
+  html:  <button class="submit-button">Submit</button> 
+
+
+
   
