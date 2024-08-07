@@ -1,75 +1,103 @@
-
-* {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans','Arial', 'sans-serif';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;  
 }
-
-img{
+.header{
+    min-height: 100vh;
     width: 100%;
-    height: 298px;
-}
-
-body{
-    background-color:rgb(236, 236, 218); 
-}
-
-.hero-image{
-    background-image: url(./image/Screenshot\ 2024-06-18\ at\ 3.46.49\ AM.png);
-    height: 52px;
-    max-width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(image/Users/fina.seti/Desktop/Screenshot 2024-08-05 at 9.57.38 PM.png);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    position: realtive; 
 }
-    
-
-.hero-text{
-    color: rgb(236, 236, 218); 
-    position: absolute;
-    text-align: left;
-    top: 10px;
-    left: 45px;
-    width: 100%;
-    font-size: 1rem;
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.two-column{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 50px;
-    width: 80%;
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #050505;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(251,85,48);
+    display: block;
     margin: auto;
-    margin-top: 40px;
-  }
-  
-  .info{
-    font-size: 1.15em;
-  }
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color:#050505;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #050505;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#050505;
+    border: 1px solid #050505;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid rgb(251,85,48);
+    background: rgb(251,85,48);
+    transition: 1s;
+}
 
-
-
-
-
-
-
-
-  /*CSS for submit button
- 
-  .submit-button:hover { 
-    background-color: #45a049; Darker green 
-  } 
-
-.submit-button {
-    background-color: 
-    color: white; 
-    padding: 12px 20px;
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-size: 16px; 
-  }
-    
-  html:  <button class="submit-button">Submit</button> 
-
-
-
-  
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background:  rgb(251,85,48);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+} 
